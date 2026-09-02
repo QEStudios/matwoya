@@ -3,7 +3,7 @@ description = "A fork of Mabuya, a minimal Zola theme for building light and SEO
 license = "MIT"
 homepage = "https://github.com/QEStudios/matwoya"
 min_version = "0.20.0"
-demo = "https://matwoya.vercel.app/"
+demo = "https://qestudios.github.io/matwoya/"
 
 [author]
 name = "SKM GEEK"
