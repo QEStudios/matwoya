@@ -1,0 +1,4 @@
+{% component time_inline(dt: string) -%}
+<time datetime="{{ dt }}" class="time-only">{{ dt |
+    date(format="%H:%M")}}</time>
+{%- endcomponent %}

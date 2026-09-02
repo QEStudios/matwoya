@@ -1,4 +1,4 @@
-{% macro page(page) -%}
+{% component page(page, config) -%}
 <div class="catalogue-item">
   <a class="catalogue-link" href="{{ page.permalink | safe }}">
     <section>
@@ -30,4 +30,4 @@
     </section>
   </section>
 </div>
-{%- endmacro %}
+{%- endcomponent %}

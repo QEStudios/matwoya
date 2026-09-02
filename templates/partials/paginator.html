@@ -1,7 +1,7 @@
 {% if paginator.pages %}
 <section class="catalogue">
   {% for page in paginator.pages -%}
-  {{ macros::page(page=page) }}
+  {{ <page page={page} config={config}/> }}
   {%- endfor %}
 </section>
 

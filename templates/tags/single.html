@@ -14,6 +14,6 @@
 </section>
 
 <section class="catalogue">
-  {% for page in term.pages -%} {{ macros::page(page=page) }} {%- endfor %}
+  {% for page in term.pages -%} {{ <page page={page} config={config}/> }} {%- endfor %}
 </section>
 {% endblock content %}

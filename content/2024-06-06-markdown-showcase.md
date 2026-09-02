@@ -178,4 +178,4 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 ![image](https://just-the-docs.com/assets/images/small-image.jpg)
 
-{{ img(src="smelling-cat.webp", alt="smelling cat") }}
+{{ <img src="smelling-cat.webp" alt="smelling cat"/> }}
