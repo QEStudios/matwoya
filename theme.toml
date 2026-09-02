@@ -1,15 +1,15 @@
-name = "Mabuya"
-description = "🦎 A minimal Zola theme for building light and SEO-ready blogs."
+name = "Matwoya"
+description = "A fork of Mabuya, a minimal Zola theme for building light and SEO-ready blogs."
 license = "MIT"
-homepage = "https://github.com/semanticdata/mabuya"
+homepage = "https://github.com/QEStudios/matwoya"
 min_version = "0.18.0"
-demo = "https://mabuya.vercel.app/"
+demo = "https://matwoya.vercel.app/"
 
 [author]
-name = "Miguel Pimentel"
-homepage = "https://github.com/semanticdata"
+name = "SKM GEEK"
+homepage = "https://github.com/QEStudios"
 
 [original]
-author = "Chester How"
-homepage = "https://chester.how/"
-repo = "https://github.com/chesterhow/tale"
+author = "Miguel Pimentel"
+homepage = "https://github.com/semanticdata"
+repo = "https://github.com/semanticdata/mabuya"

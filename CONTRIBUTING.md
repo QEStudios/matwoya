@@ -1,17 +1,15 @@
-# How to Contribute to Mabuya
+# How to Contribute to Matwoya
 
-Before contributing to Mabuya, please read our [Code of Conduct](.github/CODE_OF_CONDUCT.md).
-
-Here's a step-by-step guide to contributing to Mabuya:
+Here's a step-by-step guide to contributing to Matwoya:
 
 ### 1. Find an issue to work on
 
-- [Search for issues](https://github.com/semanticdata/mabuya/issues) to find one that interests you.
-- If there's not an issue yet, consider [creating one](https://github.com/semanticdata/mabuya/issues/new/choose).
+- [Search for issues](https://github.com/QEStudios/matwoya/issues) to find one that interests you.
+- If there's not an issue yet, consider [creating one](https://github.com/QEStudios/matwoya/issues/new/choose).
 
 ### 2. Fork the repo
 
-Fork the Mabuya repository so you have a copy of the codebase to work on.
+Fork the Matwoya repository so you have a copy of the codebase to work on.
 
 ### 3. Make your changes
 
@@ -23,10 +21,10 @@ Before submitting a pull request, review your changes to make sure your changes 
 
 ### 5. Submit a pull request
 
-- [Create a pull request](https://github.com/semanticdata/mabuya/compare) from your fork to the main Mabuya repository.
-- Enable the checkbox to allow the Mabuya maintainers to make changes to your branch.
+- [Create a pull request](https://github.com/QEStudios/matwoya/compare) from your fork to the main Matwoya repository.
+- Enable the checkbox to allow the Matwoya maintainers to make changes to your branch.
 
-Once you submit your pull request, a member of the Mabuya team will review your changes. We may ask questions or request additional information.
+Once you submit your pull request, a member of the Matwoya team will review your changes. We may ask questions or request additional information.
 
 ### 6. Make changes based on feedback
 
@@ -34,6 +32,6 @@ If the maintainers request changes, make the required updates, committing locall
 
 ### 7. Merge your changes
 
-Once your pull request is approved, a maintainer will merge your changes into the main Mabuya repository. Congratulations, you're a contributor! Your changes will be publicly visible on the Contributors page.
+Once your pull request is approved, a maintainer will merge your changes into the main Matwoya repository. Congratulations, you're a contributor! Your changes will be publicly visible on the Contributors page.
 
-We hope you'll continue to contribute to Mabuya!
+We hope you'll continue to contribute to Matwoya!
