@@ -1,15 +1,33 @@
 {% macro page(page) -%}
-<a href="{{ page.permalink | safe }}" class="catalogue-item">
-  <section>
-    <time datetime="{{ page.date }}" class="catalogue-time">{{ page.date | date(format=config.extra.timeformat |
-      default(value="%B
-      %e, %Y")) }}</time>
-    <h1 class="catalogue-title">{{ page.title }}</h1>
-    <section class="catalogue-line"></section>
-    <p>
-      {%- if page.description -%} {{ page.description | safe }} {% else -%} {{
-      page.content | striptags | truncate(length=280) | safe }} {%- endif -%}
-    </p>
+<div class="catalogue-item">
+  <a class="catalogue-link" href="{{ page.permalink | safe }}">
+    <section>
+      <time datetime="{{ page.date }}" class="catalogue-time date-only">{{ page.date |
+        date(format=config.extra.timeformat |
+        default(value="%B
+        %e, %Y")) }}</time>
+      {% if page.updated %}
+      (Updated <time datetime="{{ page.updated }}" class="catalogue-time date-only">{{ page.updated |
+        date(format=config.extra.timeformat |
+        default(value="%B
+        %e, %Y")) }}</time>)
+      {% endif %}
+      <h1 class="catalogue-title">{{ page.title }}</h1>
+      <section class="catalogue-line"></section>
+      <p>
+        {%- if page.description -%} {{ page.description | safe }} {% else -%} {{
+        page.content | striptags | truncate(length=280) | safe }} {%- endif -%}
+      </p>
+      <p class="catalogue-hint-text">Click to open full post</p>
+    </section>
+  </a>
+  <section class="tags">
+    <section class="tags-clouds catalogue-tag-clouds">
+      {% for tag in page.taxonomies.tags | sort %}
+        {% set tag_url = get_taxonomy_url(kind="tags", name=tag) %}
+        <a href="{{ tag_url }}">#{{tag}}</a>
+      {% endfor %}
+    </section>
   </section>
-</a>
+</div>
 {%- endmacro %}

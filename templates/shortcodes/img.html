@@ -1,0 +1,42 @@
+{% set image_path = "/files/" ~ src %}
+<div class="img-container"><a class="image-click" href="{{image_path}}" rel="noopener" target="_blank">
+{% set mdata = get_image_metadata(path=image_path)%}
+{% if title %}
+    {% set full_title = title ~ " (Click to open in new tab)" %}
+{% else %}
+    {% set full_title = alt ~ " (Click to open in new tab)" %}
+{% endif %}
+{% if size %}
+    {% if size == "small" %}
+        {% set s = 400 %}
+    {% endif %}
+    {% if size == "medium" %}
+        {% set s = 650 %}
+    {% endif %}
+    {% if size == "large" %}
+        {% set s = 900 %}
+    {% endif %}
+    {% set r = s * 2 %}
+    {% if noprocess or ((r >= mdata.width) and (r >= mdata.height)) %}
+        {% set url = image_path %}
+    {% else %}
+        {% if not quality %}
+            {% set quality = 60 %}
+        {% endif %}
+        {% set image = resize_image(path=image_path, width=r, height=r, op="fit", format="webp", quality=quality) %}
+        {% set url = image.url %}
+    {% endif %}
+    {% if mdata.width >= mdata.height %}
+        {% set h = s * (mdata.height / mdata.width) | int%}
+        <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{s}}" height="{{h}}" />
+    {% else %}
+        {% set w = s * (mdata.width / mdata.height) | int%}
+        <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{w}}" height="{{s}}" />
+    {% endif %}
+{% else %}
+    <img src="{{image_path}}" alt="{{alt}}" title="{{full_title}}" width="{{mdata.width}}" height="{{mdata.height}}" />
+{% endif %}
+{% if caption %}
+    <br /><em>{{caption}}</em>
+{% endif %}
+</a></div>

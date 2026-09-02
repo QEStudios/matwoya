@@ -17,6 +17,18 @@
     }
   }
 
+  &-hint-text {
+    color: variables.$default-tint;
+  }
+
+  &-link {
+    color: variables.$default-color;
+  }
+
+  &-tag-clouds {
+    text-align: left !important;
+  }
+
   &-time {
     color: variables.$default-shade;
     font-family: variables.$serif-secondary;

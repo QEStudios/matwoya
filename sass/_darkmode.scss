@@ -1,7 +1,20 @@
+@use "variables";
+
 .darkmode {
     position: absolute;
     right: 1rem;
     top: 1.5rem;
+}
+
+.darkmode-container {
+    width: 20px;
+    @include variables.transition(all 0s);
+
+    @media (max-width: 600px) {
+        margin-left: -1rem;
+        padding-inline: 0;
+        width: 0;
+    }
 }
 
 .darkmode > .toggle {
