@@ -1,5 +1,5 @@
-{% set image_path = "/files/" ~ src %}
-<div class="img-container"><a class="image-click" href="{{image_path}}" rel="noopener" target="_blank">
+{% set image_path = "files/" ~ src %}
+<div class="img-container"><a class="image-click" href="{{ get_url(path=image_path) | safe }}" rel="noopener" target="_blank">
 {% set mdata = get_image_metadata(path=image_path)%}
 {% if title %}
     {% set full_title = title ~ " (Click to open in new tab)" %}
@@ -34,7 +34,7 @@
         <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{w}}" height="{{s}}" />
     {% endif %}
 {% else %}
-    <img src="{{image_path}}" alt="{{alt}}" title="{{full_title}}" width="{{mdata.width}}" height="{{mdata.height}}" />
+    <img src="{{ get_url(path=image_path) | safe }}" alt="{{alt}}" title="{{full_title}}" width="{{mdata.width}}" height="{{mdata.height}}" />
 {% endif %}
 {% if caption %}
     <br /><em>{{caption}}</em>
