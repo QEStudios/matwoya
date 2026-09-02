@@ -2,7 +2,7 @@ name = "Matwoya"
 description = "A fork of Mabuya, a minimal Zola theme for building light and SEO-ready blogs."
 license = "MIT"
 homepage = "https://github.com/QEStudios/matwoya"
-min_version = "0.18.0"
+min_version = "0.20.0"
 demo = "https://matwoya.vercel.app/"
 
 [author]
