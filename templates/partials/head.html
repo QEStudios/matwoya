@@ -3,8 +3,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-  <meta name="description" itemprop="about" content="{{config.description}}" />
+  <title>{% block title %}{{ t }}{% endblock title %}</title>
+  <meta name="description" itemprop="about" content="{%- if page.description -%} {{ page.description }} {% else -%} {{
+        config.description }} {%- endif -%}" />
+
+  <link rel="preload" href="/fonts/Bitter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/Bitter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="/fonts/Bitter-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='assets/favicon-32x32.png') | safe }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='assets/favicon-16x16.png') | safe }}" />
@@ -12,6 +17,8 @@
 
   <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}" />
 
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
-  <link rel="alternate" type="application/atom+xml" title="Atom" href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
+  <link rel="alternate" type="application/rss+xml" title="RSS"
+    href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
+  <link rel="alternate" type="application/atom+xml" title="Atom"
+    href="{{ get_url(path='atom.xml', trailing_slash=false) }}">
 </head>
