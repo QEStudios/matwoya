@@ -12,11 +12,14 @@
 
   <nav class="navigation-footer">
     <ul>
+      {% if config.extra.footer.menu %}
+      {% for menu in config.extra.footer.menu %}
+      <li><a href="{{ menu.url | safe }}">{{ menu.name }}</a></li>
+      {% endfor %} {% else %}
       <li><a href="https://github.com/QEStudios/matwoya">Source Code</a></li>
-      <li><a href="https://skmgeek.com">Main Website</a></li>
       <li><a href="https://github.com/QEStudios">GitHub</a></li>
-      <li><a href="https://discord.com/users/665717220130816049">Discord</a></li>
-      <li><a href="https://youtube.com/skmgeek">Youtube</a></li>
+      <li><a href="https://skmgeek.com">Website</a></li>
+      {% endif %}
     </ul>
   </nav>
 

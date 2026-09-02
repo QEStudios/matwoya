@@ -40,3 +40,15 @@ url = "tags"
 
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="https://github.com/QEStudios/matwoya">Matwoya</a>.'
+
+[[extra.footer.menu]]
+name = "Source Code"
+url = "https://github.com/QEStudios/matwoya"
+
+[[extra.footer.menu]]
+name = "GitHub"
+url = "https://github.com/QEStudios"
+
+[[extra.footer.menu]]
+name = "Website"
+url = "https://skmgeek.com"
