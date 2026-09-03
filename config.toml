@@ -26,19 +26,19 @@ timeformat = "%Y-%m-%d"                 # e.g. 2021-06-14
 
 [[extra.menu]]
 name = "RSS"
-url = "/rss.xml"
+path = "/rss.xml"
 
 [[extra.menu]]
 name = "Atom"
-url = "/atom.xml"
+path = "/atom.xml"
 
 [[extra.menu]]
 name = "Archive"
-url = "/"
+path = "/"
 
 [[extra.menu]]
 name = "Tags"
-url = "tags"
+path = "/tags"
 
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org" target="_blank">Zola</a> and <a href="https://github.com/QEStudios/matwoya">Matwoya</a>.'

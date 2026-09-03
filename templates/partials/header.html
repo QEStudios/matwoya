@@ -7,7 +7,12 @@
       <ul>
         {% if config.extra?.menu %}
         {% for menu in config.extra.menu %}
-        <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
+        {%- if menu.path -%}
+          {%- set link = get_url(path=menu.path) | safe -%}
+        {%- else -%}
+          {%- set link = menu.url | safe -%}
+        {%- endif -%}
+        <li><a href="{{ link }}">{{ menu.name }}</a></li>
         {% endfor %} {% else %}
         <li><a href="{{ config.base_url | safe }}">Archive</a></li>
         <li><a href="{{ get_url(path='tags') | safe }}">Tags</a></li>
