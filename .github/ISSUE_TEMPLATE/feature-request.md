@@ -3,7 +3,7 @@ name: Feature Request
 about: Suggest an idea or improvement
 title: "[FEATURE REQUEST] "
 labels: enhancement
-assignees: semanticdata
+assignees: QEStudios
 ---
 
 ### Is your feature request related to a problem?

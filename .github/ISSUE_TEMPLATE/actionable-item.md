@@ -3,7 +3,7 @@ name: Actionable Item
 about: An actionable item has been identified.
 title: ''
 labels: actionable
-assignees: semanticdata
+assignees: QEStudios
 ---
 
 **Description of the actionable item**

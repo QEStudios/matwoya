@@ -3,7 +3,7 @@ name: Pull Request
 about: Make changes to the codebase
 title: "[Change Description]"
 labels: ''
-assignees: 'semanticdata'
+assignees: QEStudios
 ---
 
 **Describe the changes you've made**

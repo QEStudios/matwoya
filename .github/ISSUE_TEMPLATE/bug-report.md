@@ -3,7 +3,7 @@ name: Bug Report
 about: "Something about this repo isn't working the way you expect."
 title: ''
 labels: bug
-assignees: 'semanticdata'
+assignees: QEStudios
 ---
 
 **Describe the bug**
