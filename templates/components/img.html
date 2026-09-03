@@ -19,7 +19,7 @@
     {%- endif -%}
     {%- set r = s * 2 -%}
     {%- if noprocess or ((r >= mdata.width) and (r >= mdata.height)) -%}
-        {%- set url = image_path -%}
+        {%- set url = get_url(path=image_path) | safe -%}
     {%- else -%}
         {%- set image = resize_image(path=image_path, width=r, height=r, op="fit", format="webp", quality=quality) -%}
         {%- set url = image.url -%}
@@ -32,7 +32,7 @@
         <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{w}}" height="{{s}}" />
     {%- endif -%}
 {%- else -%}
-    <img src="{{ get_url(path=image_path) | safe }}" alt="{{alt}}" title="{{full_title}}" width="{{mdata.width}}" height="{{mdata.height}}" />
+    <img loading="lazy" src="{{ get_url(path=image_path) | safe }}" alt="{{alt}}" title="{{full_title}}" width="{{mdata.width}}" height="{{mdata.height}}" />
 {%- endif -%}
 {%- if caption -%}
     <br /><em>{{caption}}</em>
