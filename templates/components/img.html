@@ -25,10 +25,10 @@
         {%- set url = image.url -%}
     {%- endif -%}
     {%- if mdata.width >= mdata.height -%}
-        {%- set h = s * (mdata.height / mdata.width) | int-%}
+        {%- set h = (s * (mdata.height / mdata.width)) | round(method="floor")-%}
         <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{s}}" height="{{h}}" />
     {%- else -%}
-        {%- set w = s * (mdata.width / mdata.height) | int-%}
+        {%- set w = (s * (mdata.width / mdata.height)) | round(method="floor")-%}
         <img loading="lazy" src="{{url}}" alt="{{alt}}" title="{{full_title}}" width="{{w}}" height="{{s}}" />
     {%- endif -%}
 {%- else -%}

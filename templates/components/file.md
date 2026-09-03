@@ -1,8 +1,4 @@
-{% component file(path: string) -%}
-{%- if get_env(name="USE_CDN", default="false") == "true" -%}
-{{ "https://files.skmgeek.com/blog/" ~ path }}
-{%- else -%}
-{%- set file_path = "files/" ~ path -%}
-{{ get_url(path=file_path) | safe }}
-{%- endif -%}
+{% component file(path: string, text: string) -%}
+{% set url = "files/" ~ path -%}
+*[{{ text }}]({{ get_url(path=url) | safe }})*
 {%- endcomponent %}
