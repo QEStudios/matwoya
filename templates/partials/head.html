@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>{% block title %}{{ t }}{% endblock title %}</title>
-  <meta name="description" itemprop="about" content="{%- if page.description -%} {{ page.description }} {% else -%} {{
+  <meta name="description" itemprop="about" content="{%- if page?.description -%} {{ page.description }} {% else -%} {{
         config.description }} {%- endif -%}" />
 
   <link rel="preload" href="{{ get_url(path='fonts/Bitter-Regular.woff2') | safe }}" as="font" type="font/woff2" crossorigin="anonymous" />

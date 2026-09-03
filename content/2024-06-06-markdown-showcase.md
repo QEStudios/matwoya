@@ -174,8 +174,52 @@ Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the ses
 
 Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
 
-## Images
+## Components
 
-![image](https://just-the-docs.com/assets/images/small-image.jpg)
+### Timestamps
 
-{{ img(src="smelling-cat.webp", alt="smelling cat") }}
+This is a date <strong>{{ <date_inline dt="1969-07-20T20:17:40.000Z" config/> }}</strong>, time <em>{{ <time_inline dt="1969-07-20T20:17:40.000Z"/> }}</em>, and datetime <code>{{ <datetime_inline dt="1969-07-20T20:17:40.000Z" config/> }}</code> displayed in your current timezone.
+
+### Image
+
+#### Small
+
+{{ <img src="smelling-cat.webp" alt="smelling cat" caption="smelling cat" size="small"/> }}
+
+#### Medium
+
+{{ <img src="smelling-cat.webp" alt="smelling cat" caption="smelling cat" size="medium"/> }}
+
+#### Large
+
+{{ <img src="smelling-cat.webp" alt="smelling cat" caption="smelling cat" size="large"/> }}
+
+### Video
+
+#### Small
+
+{{ <video src="playing-cat.webm" poster="playing-cat.webp" alt="playing cat" caption="playing cat" type="video/webm" size="small"/> }}
+
+#### Small Looping
+
+{{ <video src="playing-cat.webm" poster="playing-cat.webp" alt="playing cat" caption="playing cat" type="video/webm" size="small" loop={true}/> }}
+
+#### Medium
+
+{{ <video src="playing-cat.webm" poster="playing-cat.webp" alt="playing cat" caption="playing cat" type="video/webm" size="medium"/> }}
+
+#### Large
+
+{{ <video src="playing-cat.webm" poster="playing-cat.webp" alt="playing cat" caption="playing cat" type="video/webm" size="large"/> }}
+
+### Audio
+
+{{ <audio src="cat-meow.ogg" caption="cat meow"/> }}
+
+### Download Links
+
+{{ <file text="Download smelling-cat.webp" path="smelling-cat.webp"/> }}
+
+{{ <file text="Download playing-cat.webm" path="playing-cat.webm"/> }}
+
+{{ <file text="Download cat-meow.ogg" path="cat-meow.ogg"/> }}

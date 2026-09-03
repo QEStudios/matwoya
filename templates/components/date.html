@@ -1,4 +1,6 @@
+{% component date_inline(dt: string, config) -%}
 <time datetime="{{ dt }}" class="date-only">{{ dt |
     date(format=config.extra.timeformat |
     default(value="%B
     %e, %Y"))}}</time>
+{%- endcomponent %}

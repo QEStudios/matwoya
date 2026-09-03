@@ -1,0 +1,33 @@
+{% component video(src: string, alt: string, poster: string, type: string, title = "", caption = "", size = "", loop = false, youtube = "") -%}
+{%- set video_path = "files/" ~ src -%}
+<div class="video-container">
+{%- if title -%}
+    {%- set full_title = title -%}
+{%- else -%}
+    {%- set full_title = alt -%}
+{%- endif -%}
+{%- set s = 650 -%}
+{%- if size -%}
+    {%- if size == "small" -%}
+        {%- set s = 400 -%}
+    {%- endif -%}
+    {%- if size == "medium" -%}
+        {%- set s = 650 -%}
+    {%- endif -%}
+    {%- if size == "large" -%}
+        {%- set s = 900 -%}
+    {%- endif -%}
+{%- endif -%}
+{%- if youtube -%}
+    <br /><a href="{{youtube}}">Click to watch this video on YouTube.</a>
+{%- endif -%}
+{%- set poster_path = "files/" ~ poster -%}
+<video controls playsinline {% if loop %}loop {% endif %} {% if poster %}poster="{{ get_url(path=poster_path) | safe }}"{% endif %} preload="none" alt="{{alt}}" title="{{full_title}}" width="{{s}}">
+    <source src="{{ get_url(path=video_path) | safe }}" type="{{type}}">
+    <p>Your browser doesn't support this video format. You can <a href="{{ get_url(path=video_path) | safe }}">download the video here</a>.</p>
+</video>
+{%- if caption -%}
+    <br /><em>{{caption}}</em>
+{%- endif -%}
+</div>
+{%- endcomponent %}
