@@ -5,7 +5,7 @@
     </a>
     <nav>
       <ul>
-        {% if config.extra.menu %}
+        {% if config.extra?.menu %}
         {% for menu in config.extra.menu %}
         <li><a href="{{ get_url(path=menu.url) | safe }}">{{ menu.name }}</a></li>
         {% endfor %} {% else %}

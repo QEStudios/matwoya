@@ -1,6 +1,6 @@
 <footer>
   <span class="copyright">
-    {%- if config.extra.footer -%}
+    {%- if config.extra?.footer -%}
     {{ config.extra.copyright | default(value="© 2026")}} {{ config.extra.author | default(value="SKM GEEK")}}.
     {{ config.extra.footer.info |
     default(value='Powered by Zola and Matwoya.') | safe }}
@@ -12,7 +12,7 @@
 
   <nav class="navigation-footer">
     <ul>
-      {% if config.extra.footer.menu %}
+      {% if config.extra?.footer?.menu %}
       {% for menu in config.extra.footer.menu %}
       <li><a href="{{ menu.url | safe }}">{{ menu.name }}</a></li>
       {% endfor %} {% else %}
