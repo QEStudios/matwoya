@@ -10,6 +10,10 @@ config.title %}
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <section class="post-info">
+    {% if page.draft %}
+    <span>⚠️ This post is a <b>DRAFT</b>. ⚠️</span>
+    <br>
+    {% endif %}
     {% if page.extra.author -%}
     <span>Written by</span> {{ page.extra.author }} <span>on&nbsp;</span>
     {% elif config.extra.author -%}
