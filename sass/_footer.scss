@@ -28,25 +28,28 @@ footer {
     color: variables.$default-color;
     font-family: variables.$serif-secondary;
   }
-
+  
   ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    gap: 0 1rem;
   }
-
+  
   li {
     @include variables.transition(all 0.2s ease-out);
     color: variables.$default-color;
     display: inline-block;
     opacity: 0.7;
-    padding: 0 1rem 0 0;
-
+    line-height: 1;
+    
     &:last-child {
       padding-right: 0;
     }
-
+    
     &:hover,
     &:focus {
       opacity: 1;
