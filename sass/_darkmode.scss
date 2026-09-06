@@ -53,3 +53,10 @@
 .darkmode #toggle-label-dark {
     display: inline;
 }
+
+[saved-theme="light"] .dark_mode_only {
+    display: none;
+}
+[saved-theme="dark"] .light_mode_only {
+    display: none;
+}
