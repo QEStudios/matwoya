@@ -11,13 +11,17 @@ permissions:
 jobs:
   build-only:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        zola-version: ["0.23.0", "latest"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install Zola
         uses: taiki-e/install-action@v2
         with:
-          tool: zola@0.23.4
+          tool: zola@${{ matrix.zola-version }}
       - name: Build Zola
         run: zola check --drafts
         env:
