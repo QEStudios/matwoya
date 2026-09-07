@@ -4,7 +4,7 @@ Matwoya is a fork of the [Mabuya](https://github.com/semanticdata/mabuya) theme 
 
 Originally, Matwoya was just a part of [my personal blog](https://blog.skmgeek.com/), but I moved it out into its separate own Zola theme.
 
-Tested against Zola v0.23.4.
+Tested to work on Zola 0.23.0 and 0.23.4.
 
 
 ## Features
