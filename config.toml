@@ -18,6 +18,9 @@ style = "inline"
 theme = "gruvbox-dark-medium"
 # More syntax highlighting themes: https://www.getzola.org/documentation/content/syntax-highlighting
 
+[link_checker]
+external_level = "warn"
+
 [extra]
 author = "SKM GEEK"
 copyright = "© 2026"
