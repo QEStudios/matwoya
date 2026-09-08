@@ -5,8 +5,8 @@
     &-title {
       color: variables.$default-shade;
       font-family: variables.$sans-serif;
-      font-size: 4rem;
-      margin: 1rem 0;
+      font-size: clamp(2.5rem, 2rem + 2vw, 3rem);
+      margin: 3rem 0 1rem;
       text-align: center;
     }
 
