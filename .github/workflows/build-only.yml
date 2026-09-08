@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        zola-version: ["0.23.0", "latest"]
+        zola-version: ["0.23.0", "0.23.4"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
