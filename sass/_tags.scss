@@ -59,12 +59,20 @@
     justify-content: space-between;
     padding: 5px 0;
 
+    > section {
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow: hidden;
+      margin-right: 1rem;
+    }
+
     &-title {
       color: variables.$default-color;
       text-decoration: none;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: block;
     }
 
     &-line {
@@ -78,6 +86,7 @@
       color: variables.$default-shade;
       text-align: right;
       white-space: nowrap;
+      flex: 0 0 auto;
     }
 
     &:hover,
